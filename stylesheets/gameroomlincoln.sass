@@ -6,6 +6,7 @@
 
 /* Colors */
 $black: #0F1014
+$yellow: #E7CD4B
 
 body
 	background-color: $black
@@ -48,13 +49,15 @@ div.container
 		background-image: url('/images/window.png')
 		background-repeat: no-repeat
 		
-		img.gameover
-			position: relative
-			width: 480px
-			height: 85px
-			top: 110px
-			left: 138px
-			opacity: 0.8
+		canvas.game
+		
+			img.gameover
+				position: relative
+				width: 480px
+				height: 85px
+				top: 110px
+				left: 138px
+				opacity: 0.8
 	
 	div.controls
 		width: 765px
@@ -98,12 +101,14 @@ div.container
 				margin-bottom: 0px
 				opacity: 0.8
 				@include border-radius()
-				
+			
+			p.description,	
 			hgroup.repairs
 				margin-top: 5px
 				text-align: center
 				
 			article
+				display: none
 				margin-top: 10px
 				font: 16px/28px 'LatinModernMonoLight10Regular', Arial, sans-serif	
 				opacity: 0.8
@@ -169,6 +174,9 @@ div.container
 			height: 285px
 			background-image: url('/images/sticker.png')
 			background-repeat: no-repeat	
+			
+			p
+				text-indent: -9999px
 	
 div.clear
 	clear: both

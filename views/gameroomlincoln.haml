@@ -15,7 +15,8 @@
 					%h2 Play the crap out of it.
 					%h3 1709 O St. Lincoln NE 68508 402-438-7161
 				%div{:class => 'window'}
-					%img{:src => '/images/gameover.png', :alt => 'Game Over', :class => 'gameover'}
+					%canvas{:class => 'game'}
+						%img{:src => '/images/gameover.png', :alt => 'Game Over', :class => 'gameover'}
 				%div{:class => 'controls'}
 			%hr{:class => 'divider'}
 			%section
@@ -23,6 +24,8 @@
 					%div{:class => 'paper_top'}
 					%div{:class => 'paper_middle'}
 						%h2 What's New At The Gameroom:
+						%hr
+						%p{:class => 'description'} 1000's of Games, Game Systems, Movies, Music and MUCH MORE!!
 						%hr
 						%article
 							%header
@@ -62,5 +65,6 @@
 							7 Days A Week
 						%a{:href => 'mailto:questions@gameroomlincoln.com'} questions@gameroomlincoln.com
 					%div{:class => 'sticker'}
+						%p 1000's of Games, Game Systems, Movies, Music and MUCH MORE!!
 				%div{:class => 'clear'}
 			%hr{:class => 'divider'}
