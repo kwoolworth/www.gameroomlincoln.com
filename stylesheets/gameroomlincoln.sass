@@ -1,0 +1,179 @@
+/* Gamerrom */
+
+/* Imports */
+@import "compass"
+@import "compass/reset"
+
+/* Colors */
+$black: #0F1014
+
+body
+	background-color: $black
+	
+header
+	background-image: url('/images/yellow_background.png')
+
+	hgroup
+		width: 450px
+		height: 140px
+		margin: 0px auto
+		background-image: url('/images/logo.png')
+		background-repeat: no-repeat
+		text-indent: -9999px
+
+section
+	background-image: url('/images/wood_background.png')
+	
+footer
+
+hr.divider
+	width: 100%
+	height: 30px
+	margin: 0px
+	border: none
+	background-image: url('/images/divider.png')
+	
+div.container
+	width: 840px
+	margin: 0px auto
+	padding: 0px 60px
+	background-image: url('/images/column.png')
+	background-repeat: repeat-y
+	
+	div.window
+		width: 764px
+		height: 305px
+		margin: 0px auto
+		margin-top: 20px
+		background-image: url('/images/window.png')
+		background-repeat: no-repeat
+		
+		img.gameover
+			position: relative
+			width: 480px
+			height: 85px
+			top: 110px
+			left: 138px
+			opacity: 0.8
+	
+	div.controls
+		width: 765px
+		height: 102px
+		margin: 0px auto
+		margin-top: 20px
+		padding-bottom: 20px
+		background-image: url('/images/controls.png')
+		background-repeat: no-repeat
+	
+	div.page
+		float: left
+		width: 500px
+		margin-left: 5px
+		margin-top: 5px
+	
+		div.paper_top
+			width: 500px
+			height: 65px
+			margin: 0px auto
+			background-image: url('/images/paper_top.png')
+			background-repeat: no-repeat
+		
+		div.paper_middle
+			width: 420px
+			margin: 0px auto
+			padding: 0px 40px 0px 40px
+			background-image: url('/images/paper_middle.png')
+			background-repeat: repeat-y
+			font-family: 'LatinModernMonoLight10Regular', Arial, sans-serif
+			
+			h2
+				font-family: 'LatinModernMonoLight10Bold', Arial, sans-serif
+				font-size: 28px
+				opacity: 0.8
+				
+			hr
+				border: none
+				height: 3px
+				background-color: $black
+				margin-bottom: 0px
+				opacity: 0.8
+				@include border-radius()
+				
+			hgroup.repairs
+				margin-top: 5px
+				text-align: center
+				
+			article
+				margin-top: 10px
+				font: 16px/28px 'LatinModernMonoLight10Regular', Arial, sans-serif	
+				opacity: 0.8
+					
+				header
+					background: none
+					border-bottom: 1px $black solid
+					
+					h3
+						font: 20px/28px 'LatinModernMonoLight10Bold', Arial, sans-serif
+						margin-bottom: 5px
+					
+				section
+					background: none
+					
+					p
+				
+				footer
+					border-top: 1px $black solid
+					font-size: 12px
+		
+		div.paper_bottom
+			width: 500px
+			height: 75px
+			margin: 0px auto
+			background-image: url('/images/paper_bottom.png')
+	
+		ul.links
+			list-style-type: none
+			width: 485px
+			margin-left: 15px
+		
+			li
+				float: left
+				
+				a
+					display: block
+					width: 128px
+					height: 128px
+					background-repeat: no-repeat
+					text-indent: -9999px
+					
+				a.facebook
+					background-image: url('/images/facebook.png')
+					
+				a.rss
+					background-image: url('/images/rss.png')
+	
+	div.store_info
+		float: left
+		width: 285px
+		margin: 20px
+		text-indent: -9999px
+		
+		div.coin_panel
+			width: 285px
+			height: 405px
+			background-image: url('/images/coin_panel.png')
+			background-repeat: no-repeat
+		
+		div.sticker
+			width: 285px
+			height: 285px
+			background-image: url('/images/sticker.png')
+			background-repeat: no-repeat	
+	
+div.clear
+	clear: both
+	display: block
+	overflow: hidden
+	visibility: hidden
+	width: 0px
+	height: 0px
