@@ -2,15 +2,38 @@
 %html{:lang => 'en'}
 	%head
 		%meta{:charset => 'utf-8'}
+		%meta{:description => "1000's of Games, Game Systems, Movies, Music and MUCH MORE!!"}
 		%link{:rel => 'icon', :href => 'images/icon.png', :type => 'images/png'}
 		%link{:rel => 'shortcut icon', :href => 'images/icon.png', :type => 'images/png'}
 		%link{:rel => 'stylesheet', :href => 'fonts/fonts.css', :title => 'Gameroom', :media => 'screen, projection', :type => 'text/css'}
 		%link{:rel => 'stylesheet', :href => 'css/gameroomlincoln.css', :title => 'Gameroom', :media => 'screen, projection', :type => 'text/css'}
+		/[if lt IE 9]
+			%script{:type => 'text/javascript', :src => 'http://html5shiv.googlecode.com/svn/trunk/html5.js'}
+		%script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'}
+		%script{:type => 'text/javascript', :src => 'js/jquery/jquery.pong.js'}
+		%script{:type => 'text/javascript', :src => 'js/gameroomlincoln.js'}
+		:javascript
+			/* Initiate the application javascript and run */
+			$(document).ready(function(){
+			
+				gameroomlincoln.run();
+			
+			});
+		:javascript
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-9687987-9']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 		%title GAMEROOM
 	%body
 		%div{:class => 'container'}
 			%header
-				%hgroup
+				%hgroup{:class => 'logo'}
 					%h1 GAMEROOM
 					%h2 Play the crap out of it.
 					%h3 1709 O St. Lincoln NE 68508 402-438-7161
@@ -23,48 +46,42 @@
 				%div{:class => 'page'}
 					%div{:class => 'paper_top'}
 					%div{:class => 'paper_middle'}
-						%h2 What's New At The Gameroom:
+						%h1{:class => 'whats_new'} What's New At The Gameroom:
 						%hr
-						%p{:class => 'description'} 1000's of Games, Game Systems, Movies, Music and MUCH MORE!!
+						%h1{:class => 'description'} 1000's of Games, Game Systems, Movies, Music and MUCH MORE!!
 						%hr
+						%img{:src => '/images/loading.gif', :alt => 'loading', :class => 'loading'}
 						%article
 							%header
-								%h3 12/06/10 Headline
+								%hgroup
+									%h1
+									%h2
+										%time{:pubdate => 'pubdate', :datetime => ''}
 							%section
-								%p Lorem Ipsum...
-							%footer
-								%p Lorem Bottomus...
-						%article
-							%header
-								%h3 12/06/10 Headline
-							%section
-								%p Lorem Ipsum...
-							%footer
-								%p Lorem Bottomus...
+								%p
+						%a{:href => 'http://gameroomlincoln.tumblr.com/'} Read more on our Tumblr blog&#8230;
 						%hr
 						%hgroup{:class => 'repairs'}
-							%h2 REPAIRS AVAILABLE!!
-							%h3 Now offering computer repairs | Call 402-953-2858
+							%h1 REPAIRS AVAILABLE!!
+							%h2 Now offering computer repairs | Call 402-953-2858
 						%hr
 					%div{:class => 'paper_bottom'}
 					%ul{:class => 'links'}
 						%li
-							%a{:href => 'http://www.facebook.com/gameroomlincoln', :class => 'facebook'} Facebook
+							%a{:href => 'http://www.facebook.com/gameroomlincoln', :title => 'Facebook', :class => 'facebook'} Facebook
 						%li
-							%a{:href => 'http://gameroomlincoln.tumblr.com', :class => 'rss'} RSS
+							%a{:href => 'http://gameroomlincoln.tumblr.com/rss', :title => 'RSS', :class => 'rss'} RSS
 				%div{:class => 'store_info'}
 					%div{:class => 'coin_panel'}
 						%h1 The Gameroom
-						%address
-							1709 O St. Lincoln NE 68508
+						%address 1709 O St. Lincoln NE 68508
 						%h2 Questions 402-438-7161
 						%h2 Repairs 402-953-2858
 						%h3 Store Hours
-						%p
-							10a - 9p
-							7 Days A Week
+						%p 10a - 9p | 7 Days A Week
 						%a{:href => 'mailto:questions@gameroomlincoln.com'} questions@gameroomlincoln.com
 					%div{:class => 'sticker'}
 						%p 1000's of Games, Game Systems, Movies, Music and MUCH MORE!!
 				%div{:class => 'clear'}
+			%footer
 			%hr{:class => 'divider'}

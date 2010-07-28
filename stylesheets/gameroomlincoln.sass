@@ -7,6 +7,7 @@
 /* Colors */
 $black: #0F1014
 $yellow: #E7CD4B
+$white: #FBFBF3
 
 body
 	background-color: $black
@@ -14,19 +15,22 @@ body
 header
 	background-image: url('/images/yellow_background.png')
 
-	hgroup
-		width: 450px
-		height: 140px
-		margin: 0px auto
-		background-image: url('/images/logo.png')
-		background-repeat: no-repeat
-		text-indent: -9999px
-
 section
 	background-image: url('/images/wood_background.png')
 	
 footer
 
+a
+	+link-colors($black, $yellow, $black, $yellow, $black)
+	
+hgroup.logo
+	width: 450px
+	height: 140px
+	margin: 0px auto
+	background-image: url('/images/logo.png')
+	background-repeat: no-repeat
+	text-indent: -9999px
+	
 hr.divider
 	width: 100%
 	height: 30px
@@ -42,15 +46,19 @@ div.container
 	background-repeat: repeat-y
 	
 	div.window
-		width: 764px
+		width: 765px
 		height: 305px
 		margin: 0px auto
 		margin-top: 20px
 		background-image: url('/images/window.png')
 		background-repeat: no-repeat
+		background-position: 2px 0px
 		
 		canvas.game
-		
+			width: 715px
+			height: 260px
+			margin: 20px 25px
+			
 			img.gameover
 				position: relative
 				width: 480px
@@ -67,11 +75,12 @@ div.container
 		padding-bottom: 20px
 		background-image: url('/images/controls.png')
 		background-repeat: no-repeat
+		background-position: -1px 0px
 	
 	div.page
 		float: left
 		width: 500px
-		margin-left: 5px
+		margin-left: 10px
 		margin-top: 5px
 	
 		div.paper_top
@@ -88,8 +97,9 @@ div.container
 			background-image: url('/images/paper_middle.png')
 			background-repeat: repeat-y
 			font-family: 'LatinModernMonoLight10Regular', Arial, sans-serif
+			font-smooth: always
 			
-			h2
+			h1.whats_new
 				font-family: 'LatinModernMonoLight10Bold', Arial, sans-serif
 				font-size: 28px
 				opacity: 0.8
@@ -102,33 +112,47 @@ div.container
 				opacity: 0.8
 				@include border-radius()
 			
-			p.description,	
-			hgroup.repairs
+			img.loading
+				display: none
+				width: 128px
+				height: 15px
+				margin: 20px auto
+				margin-bottom: 0px
+				opacity: 0.8
+				
+			h1.description
 				margin-top: 5px
 				text-align: center
 				
+			hgroup.repairs
+				text-align: center
+				
+				h1
+					margin-top: 5px
+					font-size: 20px
+				
 			article
-				display: none
 				margin-top: 10px
-				font: 16px/28px 'LatinModernMonoLight10Regular', Arial, sans-serif	
+				font: 16px/16px 'LatinModernMonoLight10Regular', Arial, sans-serif	
 				opacity: 0.8
 					
 				header
 					background: none
-					border-bottom: 1px $black solid
 					
-					h3
-						font: 20px/28px 'LatinModernMonoLight10Bold', Arial, sans-serif
-						margin-bottom: 5px
+					hgroup
+					
+						h1
+							font: 20px/28px 'LatinModernMonoLight10Bold', Arial, sans-serif
+						
+						h2
+							font: 14px/16px 'LatinModernMonoLight10Regular', Arial, sans-serif
+							margin: 5px 0px
 					
 				section
 					background: none
 					
 					p
-				
-				footer
-					border-top: 1px $black solid
-					font-size: 12px
+						font-size: 14px
 		
 		div.paper_bottom
 			width: 500px
@@ -138,8 +162,8 @@ div.container
 	
 		ul.links
 			list-style-type: none
-			width: 485px
-			margin-left: 15px
+			width: 480px
+			margin-left: 20px
 		
 			li
 				float: left
@@ -160,7 +184,8 @@ div.container
 	div.store_info
 		float: left
 		width: 285px
-		margin: 20px
+		margin: 20px 10px
+		margin-top: 24px
 		text-indent: -9999px
 		
 		div.coin_panel
